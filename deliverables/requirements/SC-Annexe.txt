@@ -1,2 +1,30 @@
 				
 			SCALA CITY : ANNEXE DU JEU (RÈGLES DU JEU) 
+
+
+
+	1. RÈGLES DU JEU :
+
+Scala City est un jeu de gestion dont le but est de créer sa ville. 
+
+		1.1 But du Jeu :
+
+Le joueur est un maire à la tête d'un budget qui doit lui permettre d'aménager un terrain vide en agglomérations de toute taille.
+
+Il faut s'occuper de la création de différentes zones (résidentielles, commerciales et industrielles), de la distribution d'électricité, de la constructions des routes ou encore de la gestion du budget municipal. 
+
+(Dans une extension du jeu, on pourra également se charger de la distribution d'eau, du traitement des déchets, de la construction des écoles, hôpitaux, réseaux de transports en commun…etc).
+
+Comme dans la vie réelle, le maire ne peut agir à sa guise. En effet, les administrés peuvent se rebeller contre le maire, des catastrophes naturelles peuvent arriver ou la caisse (budget) peut se vider. 
+
+C'est ce qui permet une durée de vie quasi-illimitée puisqu'aucune ville ne peut être identique à une autre, et le joueur peut ressentir une expérience unique à chaque nouvelle partie. 
+
+Enfin, une mauvaise gestion de la ville entraîne une suite de conséquences néfastes qui peuvent aller de la catastrophe nucléaire ou naturelle, à un effondrement de l'économie ou à un endettement infini …etc. 
+
+
+		 
+
+	2. TOUCHES UTILISEES
+
+Pour jouer au jeu ScalaCity, vous devez disposer d'un clavier. (…)
+	
