@@ -1,5 +1,27 @@
 			
-			SIM SCALA CITY 
+					SIM SCALA CITY 
+
+
+Introduction : 
+
+	Le projet consiste en la réalisation d'un clone du jeu SimCity. 
+Etant donné qu'aucune spécification précise n'a été demandée, nous avons dû nous intéresser à des variantes libres existantes afin de comprendre les règles et les mécanismes du jeu, notamment en étudiant leurs code source.  
+
+
+Objet : 
+	Ce cahier des charges a pour but de définir et présenter un projet de développement informatique. Le but est la réalisation d'un programme de jeu. Ce document fixera par conséquent le contexte du projet, les impératifs de cette mission ainsi que son organisation avec tout ce que cela implique.
+
+
+Contexte du projet : 
+
+	Le logiciel de loisir type jeu video exécutable sur une plateforme (?). 
+
+Ce logiciel ludique doit permettre aux utilisateurs (joueurs) de développer une certain esprit de jeu, et en particulier la gestion d'une ville. 
+
+Le jeu se présentera sous la forme d'une grille qui sera techniquement un plateau de jeu à 2 dimensions. 
+
+L'objectif du joueur, dans ce jeu de gestion, sera de créer sa ville. En effet, le joueur sera un maire à la tête d'un budget qui lui permettra d'aménager un terrain vide en agglomérations de toute taille, puis de la gérer. Tous ces différents paramètres relatifs à la jouabilité seront présentés en annexe dans une plus large mesure (Règles du jeu).
+Le jeu s'intitulera "Scala City". 
 
 
 Liste des propriétés : 
@@ -13,4 +35,30 @@ Liste des propriétés :
 
 
 
-	Charges Non - Fonctionnelle :
+	Charges Non - Fonctionnelle :	
+		- Simplicité d'utilisation	
+		- Rapidité de mise en oeuvre
+		- Standardisation d'utilisation (universalité des plateformes de jeux type PC)		- Assurer des temps de transactions faibles - Save / Load game.
+		- Assurer des temps d'exécutions faibles (lancement du jeu - perf)
+		- Assurer des temps d'interactions joueur / machine faibles (fluidité)
+		- Assurer une qualité audio (pour les extensions)
+		- Assurer une prise en main du jeu aisée (contrôle)
+		- Offrir une conduite d'utilisation (guide)
+		- Assurer une grande fiabilité 
+		- Assurer une robustesse d'usage
+		- Garantir une durée de vie objective 
+
+					
+					
+
+
+
+
+
+
+
+
+
+
+
+			
