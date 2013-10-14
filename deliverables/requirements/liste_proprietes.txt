@@ -77,6 +77,7 @@ Charges Fonctionnelle :
 
 Le joueur devra surveiller les taxes, les crimes, la pollution et le trafic et gérer les réseaux routiers, électriques et des eaux.
  
+PS : Le document est actuellement en format texte, mais lors du passage en PDF, il se peut que l'indentation passe à la trappe… dans ce cas, on fera un texte plus clair.
 
 
 
