@@ -27,9 +27,8 @@ Le jeu s'intitulera "Scala City".
 Liste des propriétés : 
 
 	Charges Fonctionnelle : 
-
-
-
+		- L'interface n'est pas bloquante
+		
 
 
 
@@ -49,10 +48,44 @@ Liste des propriétés :
 		- Garantir une durée de vie objective 
 
 					
-					
+				
+
+
+L'interface du jeu sera composé d'une zone interface en bas et de la fenêtre représentant la ville au dessus.
+Les différents bâtiments seront coloré différemment et pour connaitre le niveau d'évolution d'un bâtiment il y aura un numéro dessus allant de 0 a 9. Apres construction une maison aura un niveau 1, ce niveau evolue ensuite dépendément de son environnement et son niveau de vie.
+les maisons peuvent baisser de niveau et devenir des taudis (niveau 0)
+
+Les condition de vie son déterminer par: la distance des zone industrielle, le nombre de marchandise différente a leur disposition, si ils sont connecté a une route et on l'électricité et l'eau courante ainsi qu'un emplois. 
+
+Le nombre de marchandise dépend du nombre de magasin et de leur niveau. Un magasin de niveau 9 est considéré très grand avec une grande variété.
+
+Un magasin evolue en fonction de la richesse de la population alentour. Les employer des magasin son de mieux en mieux payé au fur et a mesure du niveau du magasin.
+
+Les zones industrielle on aussi un niveau de 0 a 9 et evolue par l'éducation de leur travailleur. Plus la zone industriel est evolué plus les travailleur sont bien payé. Les gens ne peuvent pas habité trop loin de la zone industriel pour pouvoir y travailler.
+les zones industriel pollue plus plus leur niveau est haut.
+
+il y a un temps minimum entre 2 évolutions d'un bâtiment.
+
+L'education de la population augmente en construisant des écoles et des université.	
+
+le joueur devra surveiller different aspect du jeux tels que:
+	- les taxes
+	- le crime
+	- la pollution
+	- le trafic
+
+il y a 3 réseaux different a géré:
+	- routier
+	- electrique
+	- réseau des eaux
 
 
 
+Le jeu contient 4 type d'éléments clé:
+	- les zone (Residence, magasin, industriel, ferme)
+	- les bâtiments ( école, station de police, station de pompier, université, pompe a eau, central nuclear et plus a venir)
+	- les connecteur (route, câble, tuyeau)
+	- les effets (a une position et une zone d'effet, par exemple une explosion, une tempête, une parade etc)
 
 
 
