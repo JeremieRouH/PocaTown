@@ -24,68 +24,78 @@ L'objectif du joueur, dans ce jeu de gestion, sera de créer sa ville. En effet,
 Le jeu s'intitulera "Scala City". 
 
 
-Liste des propriétés : 
+ 
+Charges Fonctionnelle : 
 
-	Charges Fonctionnelle : 
-		- L'interface n'est pas bloquante
+		- Interface du jeu : Découpé en 2 zones : 
+							 - Fenêtre représentant la ville en haut, 
+							 - Zone pour les retours en bas (i.e trop de pollution)
 		
+		
+	Le jeu se décompose en 5 éléments clés : 
+
+
+		- Bâtiments : Couleur pour les différencier, Chiffre (de 0 à 9) pour leur niveau d'évolution : 
+							 - Après construction, une maison est de niveau 1 : son évolution dépend de son environnement et son niveau de vie.  
+ 							 - Le niveau d'une maison peut diminuer jusqu'à devenir un taudis (niveau 0)
+							 - Temps minimum entre 2 évolutions d'un même bâtiment.  
+							 - Liste : école, station de police, station de pompier, université, pompe à eau, centrale nucléaire…etc)
+
+
+		- Zones : Chiffre (de 0 à 9) pour leur niveau d'évolution : 
+			(Résidences, Magasins, Industrielles, Fermes) : - Magasin : 	  - évolue en fonction de la richesse de la population aux alentours
+										   		 -> employés de plus en plus payés suivant le niveau du magasin.
+										    	  - nombre de marchandise dépend du nombre de magasin et de leur niveau
+												 -> i.e Magasin de niveau 9 : très grand, grande variété de produits.
+
+								        - Industrielles : - évolue par l'éducation de leurs travailleurs
+												 -> plus le niveau est élevé et plus les travailleurs sont payés.		   										  	  - travailleurs ne doivent pas habiter trop loin pour y travailler.
+									 		  - plus le niveau est élevé et plus la pollution dégagée est élevée.
+												
+		
+																
+		- Taux : (Population, Taxes, Pollution) : 
+								- Population : - Education : 
+									- augmente en construisant des écoles et des universités, 
+							        - Condition de vie déterminée par : 
+									- distance des zones industrielles
+									- nombre de marchandises différentes à leur disposition
+									- connectés à une route ?
+									- électricité, eau courante, emploi ?
+
+		- Connecteurs : - Routes, 
+				- Câbles, 
+				- Tuyaux.
 
 
 
 
+		- Effets : - position et effet de zone
+			   - Liste : Explosion, Tempête, Parade…etc .
 
-	Charges Non - Fonctionnelle :	
+
+
+Le joueur devra surveiller les taxes, les crimes, la pollution et le trafic et gérer les réseaux routiers, électriques et des eaux.
+ 
+
+
+
+Charges Non - Fonctionnelle :	
+
 		- Simplicité d'utilisation	
 		- Rapidité de mise en oeuvre
-		- Standardisation d'utilisation (universalité des plateformes de jeux type PC)		- Assurer des temps de transactions faibles - Save / Load game.
-		- Assurer des temps d'exécutions faibles (lancement du jeu - perf)
+		- Standardisation d'utilisation (universalité des plateformes de jeux)(Pas sûr??)		
+		- Assurer des temps de transactions faibles - Save / Load game.
+		- Assurer des temps d'exécutions faibles (lancement du jeu - performances)
 		- Assurer des temps d'interactions joueur / machine faibles (fluidité)
-		- Assurer une qualité audio (pour les extensions)
+		- Assurer une qualité audio (pour les extensions)(Pas sûr ??)
 		- Assurer une prise en main du jeu aisée (contrôle)
 		- Offrir une conduite d'utilisation (guide)
 		- Assurer une grande fiabilité 
 		- Assurer une robustesse d'usage
 		- Garantir une durée de vie objective 
 
-					
-				
 
-
-L'interface du jeu sera composé d'une zone interface en bas et de la fenêtre représentant la ville au dessus.
-Les différents bâtiments seront coloré différemment et pour connaitre le niveau d'évolution d'un bâtiment il y aura un numéro dessus allant de 0 a 9. Apres construction une maison aura un niveau 1, ce niveau evolue ensuite dépendément de son environnement et son niveau de vie.
-les maisons peuvent baisser de niveau et devenir des taudis (niveau 0)
-
-Les condition de vie son déterminer par: la distance des zone industrielle, le nombre de marchandise différente a leur disposition, si ils sont connecté a une route et on l'électricité et l'eau courante ainsi qu'un emplois. 
-
-Le nombre de marchandise dépend du nombre de magasin et de leur niveau. Un magasin de niveau 9 est considéré très grand avec une grande variété.
-
-Un magasin evolue en fonction de la richesse de la population alentour. Les employer des magasin son de mieux en mieux payé au fur et a mesure du niveau du magasin.
-
-Les zones industrielle on aussi un niveau de 0 a 9 et evolue par l'éducation de leur travailleur. Plus la zone industriel est evolué plus les travailleur sont bien payé. Les gens ne peuvent pas habité trop loin de la zone industriel pour pouvoir y travailler.
-les zones industriel pollue plus plus leur niveau est haut.
-
-il y a un temps minimum entre 2 évolutions d'un bâtiment.
-
-L'education de la population augmente en construisant des écoles et des université.	
-
-le joueur devra surveiller different aspect du jeux tels que:
-	- les taxes
-	- le crime
-	- la pollution
-	- le trafic
-
-il y a 3 réseaux different a géré:
-	- routier
-	- electrique
-	- réseau des eaux
-
-
-
-Le jeu contient 4 type d'éléments clé:
-	- les zone (Residence, magasin, industriel, ferme)
-	- les bâtiments ( école, station de police, station de pompier, université, pompe a eau, central nuclear et plus a venir)
-	- les connecteur (route, câble, tuyeau)
-	- les effets (a une position et une zone d'effet, par exemple une explosion, une tempête, une parade etc)
 
 
 
