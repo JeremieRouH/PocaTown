@@ -1,5 +1,5 @@
 			
-					SIM SCALA CITY 
+					POCATOWN 
 
 
 Introduction : 
@@ -21,7 +21,7 @@ Ce logiciel ludique doit permettre aux utilisateurs (joueurs) de développer une
 Le jeu se présentera sous la forme d'une grille qui sera techniquement un plateau de jeu à 2 dimensions. 
 
 L'objectif du joueur, dans ce jeu de gestion, sera de créer sa ville. En effet, le joueur sera un maire à la tête d'un budget qui lui permettra d'aménager un terrain vide en agglomérations de toute taille, puis de la gérer. Tous ces différents paramètres relatifs à la jouabilité seront présentés en annexe dans une plus large mesure (Règles du jeu).
-Le jeu s'intitulera "Scala City". 
+Le jeu s'intitulera "Poca Town". 
 
 
  
@@ -77,8 +77,6 @@ Charges Fonctionnelle :
 
 Le joueur devra surveiller les taxes, les crimes, la pollution et le trafic et gérer les réseaux routiers, électriques et des eaux.
  
-PS : Le document est actuellement en format texte, mais lors du passage en PDF, il se peut que l'indentation passe à la trappe… dans ce cas, on fera un texte plus clair.
-
 
 
 Charges Non - Fonctionnelle :	
@@ -102,6 +100,7 @@ Charges Non - Fonctionnelle :
 
 
 
+PS : Le document est actuellement en format texte, mais lors du passage en PDF, il se peut que l'indentation passe à la trappe… dans ce cas, on fera un texte plus clair.
 
 
 
