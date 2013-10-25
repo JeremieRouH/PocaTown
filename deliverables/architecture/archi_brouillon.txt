@@ -1,0 +1,30 @@
+
+
+Augmenter de niveau : -> électricité+ , eau+, route, nb personne+, richesse +, moins de zones indust +, accès aux commerces, et certains bâtiments ( école, hôpitaux…etc ), taux, 
+(taux pour chaque zones)
+
+augmentation criminalité : zones bas niveaux + , présence de commissariat - 
+
+taux : pas de stockage et on les recalcule quand on en a besoin 
+
+problem techniques : fournisseur / distributeur , centrale électrique et nouvelles habitations, centrale électrique et distribution (idem avec le 1), évolution de niveaux dépend de (voir plus haut)
+
+Effet : présent pour implémentation future 
+
+Transport : type : fournisseur ? il dessère des arrêts …
+
+Voiture : nb de voiture / trop de voitures / pas assez de route / trop de trafic/ pollution
+
+Embouteillage : calcul du nb de voiture par rapport au nb d habitants, et 
+
+un commerçant a besoin d une ZI pour obtenir des produits hence plus de zones industrielles..Etc 
+
+Mémorisation des taux pour réaliser des stats graphe … suivant les années (durée sur 10 ans / sur 120 ans…etc) avec des filtres suivant les taux .
+
+Interpretation du sujet : Jerem.
+
+
+Extensions : 
+	Plusieurs Villes (avoir des interactions avec les villes avoisinantes, achat/vente 	de services..) 
+        Aliens ( Declinaison de la classe Entity)				         	Effets (déjà pris en compte dans l archi)
+	     
