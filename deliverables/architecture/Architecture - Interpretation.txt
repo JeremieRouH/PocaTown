@@ -1,0 +1,29 @@
+
+
+	Sujet et Enjeux : 
+
+Poca Town est un jeu de gestion permettant de créer et modifier une ville. En tant que maire, le joueur devra veiller à maintenir un budget lui permettant de réaliser différents aménagements au sein de la ville. 
+
+On souhaite commencer le projet par une base solide, nous permettant d’ajouter n’importe quel type d’objet dans de futures extensions, sans pour autant avoir besoin de modifier totalement le code source.  
+
+En effet, l’architecture du projet repose sur un concept d’évolution. Tous les objets présents sur la carte seront susceptible d’évoluer au cours du temps, que ce soit les habitations ou les habitants (sims).
+
+ 
+	Problèmes Techniques et Conceptuels :  
+
+
+Après réflexion sur le sujet, plusieurs problèmes conceptuels et techniques ont été soulevés. 
+
+Le concept d’évolution est à définir méticuleusement car presque toute la mécanique du jeu repose dessus.
+
+Par exemple, qu’est-ce qui provoque l’augmentation du niveau d’une habitation ? 
+
+Ou encore, quel rôle auront les centrales électriques ? Leur travail sera t’il de fournir l’électricité uniquement ? ou devront elles le distribuer également ? 
+
+Comment varieront les taux(pollution, criminalité, trafic) ? De quoi vont ils dépendre ? 
+
+De même, plusieurs problèmes techniques sont apparus.
+
+Les informations essentielles concernant les habitations, les zones, les sims devront elles être enregistrées en mémoire ? 
+
+(Incomplet…)
