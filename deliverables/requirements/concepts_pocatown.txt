@@ -1,0 +1,16 @@
+Conceepts utiliser pour modéliser pocatown:
+
+	- Définition des différents éléments pour ensuite les "classer" dans un type abstrait
+	- Les types abstrait doivent couvrir les différentes possibilité d'extension
+	- pour définir les différents élément nous avons utiliser l'approche objet en nous basant principalement sur SimCity4
+	- Un bâtiments est une unité qui n'évolue et ne change pas. Un bâtiment peut tomber en panne.
+	- Une zone est un type de de construction qui peut évoluer et changer.
+	- Un connecteur est tout objet qui relie les ressources
+	- Un connecteur est stable et reste le meme, les connecteurs ne tombent pas en panne.
+	- si il est connecté a une route, un bâtiment ou une zone fonctionne toujours et participe a la ville. (qqch participe a la ville si il a une influence)
+	- Une habitation construite a toujours au moins un habitant
+	- Un bâtiment ou une zone ne peut être construit que si il est connecté a la route
+	- les bâtiment on une influence en zone circulaire autour d'elle plus ou moins grande
+	- tous les bâtiment coute de l'argent
+	- l'industrie crée des produit qu'ils donnent au commerçant qui sont acheté par les habitants. Si il y a un déséquilibre on notifie le maire. Ceci constitue la base du jeux et constitue la ligne rouge qui guide le joueur.
+	
