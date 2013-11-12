@@ -1,0 +1,149 @@
+			
+					POCA TOWN 
+
+
+Introduction : 
+
+	Le projet consiste en la réalisation d'un clone du jeu SimCity. 
+Etant donné qu'aucune spécification précise n'a été demandée, nous avons dû nous intéresser à des variantes libres existantes afin de comprendre les règles et les mécanismes du jeu, notamment en étudiant leurs code source.  
+
+
+Objet : 
+	Ce cahier des charges a pour but de définir et présenter un projet de développement informatique. Le but est la réalisation d'un programme de jeu. Ce document fixera par conséquent le contexte du projet, les impératifs de cette mission ainsi que son organisation avec tout ce que cela implique.
+
+
+Contexte du projet : 
+
+ 
+Ce logiciel ludique doit permettre aux utilisateurs (joueurs) de développer une certain esprit de jeu, et en particulier la gestion d'une ville. 
+
+L'objectif du joueur, dans ce jeu de gestion, sera de créer sa ville. En effet, le joueur sera un maire à la tête d'un budget qui lui permettra d'aménager un terrain vide en agglomérations de toute taille, puis de la gérer. 
+
+Tous ces différents paramètres relatifs à la jouabilité seront présentés en annexe dans une plus large mesure (Règles du jeu).
+
+Le jeu s'intitulera "Poca Town". 
+
+La ville est représentée par des rectangles colorés et dans le but de faciliter la vue pour l’utilisateur, on a ajouté une grille.
+
+Les différents rectangles représentent les éléments plaçables dans la ville, avec un affichage nominatif.
+
+
+ 
+Charges Fonctionnelle : 
+
+		- Interface du jeu : Découpé en 2 zones : 
+							 - Fenêtre représentant la ville en haut, 
+							 - Zone pour les retours en bas (i.e trop de pollution)
+		
+		
+Le jeu se décompose en 5 éléments clés : 
+
+
+		- Bâtiments : Couleur pour les différencier, Chiffre (de 0 à 9) pour leur niveau d'évolution : 
+							 - Après construction, une maison est de niveau 1 : son évolution dépend de son environnement et son niveau de vie.  
+ 							 - Le niveau d'une maison peut diminuer jusqu'à devenir un taudis (niveau 0)
+							 - Temps minimum entre 2 évolutions d'un même bâtiment.  
+							 - Liste : école, station de police, station de pompier, université, pompe à eau, centrale nucléaire…etc)
+
+
+		- Zones : Chiffre (de 0 à 9) pour leur niveau d'évolution : 
+			(Résidences, Magasins, Industrielles, Fermes) : - Magasin : 	  - évolue en fonction de la richesse de la population aux alentours
+										   		 -> employés de plus en plus payés suivant le niveau du magasin.
+										    	  - nombre de marchandise dépend du nombre de magasin et de leur niveau
+												 -> i.e Magasin de niveau 9 : très grand, grande variété de produits.
+
+								        - Industrielles : - évolue par l'éducation de leurs travailleurs
+												 -> plus le niveau est élevé et plus les travailleurs sont payés.		   										  	  - travailleurs ne doivent pas habiter trop loin pour y travailler.
+									 		  - plus le niveau est élevé et plus la pollution dégagée est élevée.
+												
+		
+																
+		- Taux : (Population, Taxes, Pollution) : 
+								- Population : 
+
+								- Education : 
+									- augmente en construisant des écoles et des universités, 
+							        - Condition de vie déterminée par : 
+									- distance des zones industrielles
+									- nombre de marchandises différentes à leur disposition
+									- connectés à une route ?
+									- électricité, eau courante, emploi ?
+
+		- Connecteurs : - Routes, 
+				- Câbles, 
+				- Tuyaux.
+
+
+
+
+		- Effets : - position et effet de zone
+			   - Liste : Explosion, Tempête, Parade…etc .
+
+
+
+Le joueur devra surveiller les taxes, les crimes, la pollution et le trafic et gérer les réseaux routiers, électriques et des eaux.
+ 
+
+
+Charges Non - Fonctionnelle :	
+
+		- Simplicité d'utilisation	
+		- Rapidité de mise en oeuvre
+		- Standardisation d'utilisation (universalité des plateformes de jeux)(Pas sûr??)		
+		- Assurer des temps de transactions faibles - Save / Load game.
+		- Assurer des temps d'exécutions faibles (lancement du jeu - performances)
+		- Assurer des temps d'interactions joueur / machine faibles (fluidité)
+		- Assurer une qualité audio (pour les extensions)(Pas sûr ??)
+		- Assurer une prise en main du jeu aisée (contrôle)
+		- Offrir une conduite d'utilisation (guide)
+		- Assurer une grande fiabilité 
+		- Assurer une robustesse d'usage
+		- Garantir une durée de vie objective 
+
+
+
+
+Quelles sont les difficultés soulevées ?
+
+Un obstacle du projet concerne l’extensibilité du système. 
+En effet, la difficulté sera de pouvoir rajouter des objects nouveaux dans l’architecture du projet sans devoir forcément remanier le code source.
+Il en va de même pour l’interface, tous les nouveaux objets devront pouvoir être rajoutés sans effort, au schéma existant.
+
+Autre chose, chaque objet (bâtiment, zone..) est supposé pouvoir échanger des informations avec la classe mère, dans laquelle il est contenu.
+
+Ce qui va se passer c’est qu’une classe va déclencher l’exécution d’une ou de plusieurs classes.
+En particulier, la classe « The Game » récupère les données dans la classe « Ville », puis utilise les modules pour gérer les objets.
+
+Ce que nous voulons faire, c’est de rendre tous les modules indépendants les uns des autres puis de les coupler à un observateur qui fera le lien entre tous les objets 
+et gère ainsi le jeu.
+
+Nous allons utilisé un patron de conception appelé « Observateur » permettant de résoudre les difficultés énoncées plus haut.
+
+En cas de notification, l’observateur effectue l’action adéquate en fonction des informations qui parviennent depuis les modules qu’il observe (dits les « observables »).
+
+Plus simplement, c’est par ce biais que l’observateur effectue des changements sur nos composants lorsqu’on cliquera dessus. (ou qu’on les survolera ?)
+
+Dans notre cas, nous allons devoir définir une classe (« The Game ») qui jouera le rôle d’observateur, et qui observera toutes les classes objets définis précédemment, à savoir les zones, les bâtiments, les connecteurs, les taux et les effets.
+
+Ces dernières joueront donc le rôle d’observable.
+
+
+
+Pour montrer l’importance de ce design pattern, raisonnons par l’absurde : 
+
+On imagine la réalisation du jeu sans le design pattern Observer. 
+
+En effet, la classe (« The Game ») doit être informée en temps réel des changements de valeurs de chacun des modules, donc elle doit aller 
+récupérer les nouvelles valeurs et ce, à chaque changement. De plus, quand est-ce que la classe « The Game » devra elle récupérer ces informations ? Toutes les heures ? Toutes les minutes ? 
+
+Quelque soit l’intervalle choisi, soient les données ne seront pas à jour, soit on surchargera la classe « The Game » d’appels inutiles.
+
+La solution consiste donc à laisser la charge aux classes objets d’informer la classe « The Game » de ses changements de valeurs.
+
+
+
+ 
+
+
+
+			
