@@ -31,11 +31,40 @@ Ainsi, pour gérer ce phénomène, on va devoir utiliser des observateurs et des
 tout en réduisant les dépendances aux seules exécutions observées.
 
 Par chance, il existe un design pattern appelé « Observateur » permettant de résoudre les problèmes énoncés plus haut.
+
 En particulier, on utilise ce patron de conception pour envoyer un signal à des modules qui jouent le rôle d’observateurs. 
+
 En cas de notification, les observateurs effectuent l’action adéquate en fonction des informations qui parviennent depuis les modules qu’ils 
 observent (dits les « observables »).
 
 Plus simplement, c’est par ce biais que nos composants effectueront quelque chose lorsqu’on cliquera dessus ou qu’on les survolerera.
+
+
+Dans notre cas, nous allons devoir définir une classe (« The Boss ») qui jouera le rôle d’observateur, et qui observera toutes les classes objets définis précédemment, à savoir les zones, les bâtiments, les connecteurs, les taux et les effets.
+
+Ces dernières joueront donc le rôle d’observable. Leur but étant de tenir informé la classe observateur de tout changement de valeur. 
+
+
+
+
+
+
+Pour montrer l’importance de ce design pattern, raisonnons par l’absurde : 
+
+On imagine la réalisation du jeu sans le design pattern Observer. 
+
+En effet, la classe (« The Boss ») doit être informée en temps réel des changements de valeurs de chacun des modules, donc elle doit aller 
+récupérer les nouvelles valeurs et ce, à chaque changement. De plus, quand est-ce que la classe « The Boss » devra elle récupérer ces informations ? Toutes les heures ? Toutes les minutes ? 
+Quelque soit l’intervalle choisi, soient les données ne seront pas à jour, soit on surchargera la classe « The Boss » d’appels inutiles.
+
+La solution consiste donc à laisser la charge aux classes objets d’informer la classe « The Boss » de ses changements de valeurs.
+
+
+Edit : 
+
+Les modules ne font rien d’eux-même, et c’est l’observateur qui va induire les changements.
+
+
 
 
 (
@@ -55,14 +84,7 @@ Observer fait communiquer des objets entre eux sans pour autant qu’ils se conn
 
 ————————————————————————————————————————————
 
-
-Où on va ? Comment on résout les problèmes ?
-Identifier les problèmes ? Poser des Q et y répondre spécifiquement (techniquement)
-
-Ex : Ville : objet ville, représenté graphiquement par l interface de la ville (Jeu - Ville - Map)
-
-Il faut qu’un newbie puisse lire le cahier des charges et comprendre de quoi on parle, comment va t’on le réaliser, il faut parler des concepts principaux.
-
+ 
 
 
 
