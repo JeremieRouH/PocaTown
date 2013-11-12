@@ -5,6 +5,11 @@
 « Comment va t’on faire ? »
  
 
+/*
+La ville est représentée par des rectangles colorés. Pour faciliter la vue on a ajouté une grille.
+Les différents rectangles représentent les éléments plaçables dans la ville.
+*/
+
 La ville est représentée par un tableau de cases, dont chaque case représente une unité de construction.
 Les zones, bâtiments et autres principaux éléments, qui sont construits sur une ou plusieurs cases de la grille, seront représentés par des
 rectangles colorés, avec affichage nominatif.
@@ -12,40 +17,37 @@ rectangles colorés, avec affichage nominatif.
 La version alpha sera l’implémentation minimale du jeu.
 
 
-« Quels sont les problèmes ? »
+« Quels sont les problèmes(Difficulté) ? »
 
 
-Le problème majeur du projet concerne l’extensibilité du système.  
+Le problème majeur du projet concerne l’extensibilité du système.
 
 En effet, la difficulté sera de pouvoir rajouter des objets nouveaux dans l’architecture du projet sans devoir forcément remanier le code source. 
 De même pour l’interface du projet, tous les nouveaux objets devront être rajoutés sans effort, au schéma existant.
 
 Un autre problème apparaît dans la conception. 
 
-En effet, chaque objet (bâtiment,zone..) est supposé pouvoir échanger des informations avec la « fenêtre » dans laquelle il est contenu (retour utilisateur) (ex : trop de pollution). 
+En effet, chaque objet (bâtiment,zone..) est supposé pouvoir échanger des informations avec « the boss » dans laquelle il est contenu?? (retour utilisateur) (ex : trop de pollution). 
 
- 
+
+
 Ce qui va se passer, c’est qu’une classe va déclencher l’éxecution d’une ou de plusieurs classes.
+//BOSS -> prend les donnée dans « Ville » et utilise les modules pour gérer les objets.
 
-Ainsi, pour gérer ce phénomène, on va devoir utiliser des observateurs et des (objets) observables de manière à coupler les différents modules
-tout en réduisant les dépendances aux seules exécutions observées.
+//Ce que nous voulons faire est de rendre tous les modules indépendant les un des autres et les coupler à un observateur qui fait le lien entre tous les objets et gère ainsi le jeu
 
-Par chance, il existe un design pattern appelé « Observateur » permettant de résoudre les problèmes énoncés plus haut.
+Il existe un design pattern appelé « Observateur » permettant de résoudre les problèmes énoncés plus haut.
 
-En particulier, on utilise ce patron de conception pour envoyer un signal à des modules qui jouent le rôle d’observateurs. 
 
-En cas de notification, les observateurs effectuent l’action adéquate en fonction des informations qui parviennent depuis les modules qu’ils 
+En cas de notification, l’observateur effectuent l’action adéquate en fonction des informations qui parviennent depuis les modules qu’il 
 observent (dits les « observables »).
 
-Plus simplement, c’est par ce biais que nos composants effectueront quelque chose lorsqu’on cliquera dessus ou qu’on les survolerera.
+Plus simplement, c’est par ce biais que l’observateur effectue des changement sur nos composants lorsqu’on cliquera dessus. ou qu’on les survolerera?
 
 
 Dans notre cas, nous allons devoir définir une classe (« The Boss ») qui jouera le rôle d’observateur, et qui observera toutes les classes objets définis précédemment, à savoir les zones, les bâtiments, les connecteurs, les taux et les effets.
 
-Ces dernières joueront donc le rôle d’observable. Leur but étant de tenir informé la classe observateur de tout changement de valeur. 
-
-
-
+Ces dernières joueront donc le rôle d’observable.
 
 
 
