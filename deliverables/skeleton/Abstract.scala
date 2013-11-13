@@ -38,10 +38,6 @@ class Fermes extends Zone with Agricole
 
 abstract class Batiment {
   var coutMaintien:Int
-  val effectifMax:Int
-  var effectifActuel:Int
-  var niveau_evolution:Int
-  var derEvolution:Int
 }
 
 trait Scolariser {}
