@@ -2,9 +2,7 @@ abstract class Zone {
   var niveau_evolution:Int //0 pour non construit, en construction
   var taux:List[Taux]
   def peuxEvoluer 	//Regarde les taux pour savoir si les conditions sont bonne, 
-  					//doit aussi vŽrifier si il y a tous les connecteurs nŽcessaire
-  def evolue:Boolean
-  
+  					//doit aussi vï¿½rifier si il y a tous les connecteurs nï¿½cessaire
 }
 
 trait Residentielle {
