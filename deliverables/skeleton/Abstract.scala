@@ -3,6 +3,7 @@ abstract class Zone {
   var taux:List[Taux]
   def peuxEvoluer 	//Regarde les taux pour savoir si les conditions sont bonne, 
   					//doit aussi vérifier si il y a tous les connecteurs nécessaire
+  def evolue:Boolean
   
 }
 
@@ -10,31 +11,28 @@ trait Residentielle {
   def Evolue(){}
 }
 trait Commerciale {
-  var augmenterSalaire:Boolean
-  var agmenterStock:Boolean
-  def Evolue(plusriche: Boolean)={
-      if(plusriche)
-	niveau_evolution=niveau_evolution+1
-	augmenterSalaire=true
-	augmenterStock=true	
-  }
+  var stock:Int
+
 }
 trait Industrielle {
   var niveau_pollution:Int
-  def Evolue(plusDiplomes: Boolean)={
-      if(plusDiplomes)
-	niveau_evolution=niveau_evolution+1
-	niveau_pollution=niveau_pollution+1
-  }
-}
-trait Agricole {
-  def Evolue()
+  
 }
 
-class Residences extends Zone with Residentielle
-class Commerces extends Zone with Commerciale
-class Industries extends Zone with Industrielle
-class Fermes extends Zone with Agricole
+trait Producteur {
+  var production:Int
+}
+
+trait EstTravail {
+  var salaire:Int
+  var effectifMax:Int
+  var effectifActuel:Int
+  
+}
+
+trait Agricole {
+	
+}
 
 abstract class Batiment {
   var coutMaintien:Int
@@ -73,9 +71,7 @@ abstract class Effet {
   var puissance:Int
 }
 
-abstract class Taux {
-  //Je pense que cette classe ne sert a rien... on y revien
-}
+abstract class Taux (var clef:String, var valeur:Double)
 
 abstract class Ville {
   val hauteur:Int

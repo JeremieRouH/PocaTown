@@ -8,14 +8,14 @@ import scala.swing.event.Key
 
 object Values {
 	val GUIWidth = 800
-			val GUIHeight = 600
+	val GUIHeight = 600
 }
 
-object MyGUi extends SimpleSwingApplication {
+object MyGUI extends SimpleSwingApplication {
 
 	def top = new MainFrame {
 		title = "Poca Town Interface"
-				var r= new RectangleColore(new Position(5,5),2,2,Color.blue)
+		var r= new RectangleColore(new Position(5,5),2,2,Color.blue)
 		var rr=new RectangleColore(new Position(1,2),4,5,Color.red, "Hello")
 		var rrr= new RectangleColore(new Position(0,0),1,1,Color.green,"H1")
 		var rrrr= new RectangleColore(new Position(30,10),2,2,Color.red)
@@ -42,7 +42,7 @@ class GamePanel(var rectangles:Array[RectangleColore], private var pos:Position,
 			pos.x +=5
 		}
 	}
-	
+
 	def moveLeft{
 		if(pos.x>0){
 			pos.x -= 5
@@ -76,9 +76,9 @@ class GamePanel(var rectangles:Array[RectangleColore], private var pos:Position,
 	repaint
 	}
 	focusable = true
-			requestFocus
+	requestFocus
 
-			override def paintComponent(g:Graphics2D){
+	override def paintComponent(g:Graphics2D){
 		g.setColor(Color.white)
 		g.fillRect(0, 0, caseWidth * nbCaseWidth, caseHeight * nbCaseHeight)
 
