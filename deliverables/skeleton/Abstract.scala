@@ -32,6 +32,18 @@ trait Agricole {
 	
 }
 
+trait besoinEau{
+  def aDeLeau:Boolean	
+}
+
+trait besoinElectricite{
+  def aDeLelectricite:Boolean
+}
+
+trait desservieRoute{
+  def desservie:Boolean	
+}
+
 abstract class Batiment {
   var coutMaintien:Int
 }
