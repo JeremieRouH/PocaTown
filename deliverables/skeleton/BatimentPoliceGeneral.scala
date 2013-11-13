@@ -1,5 +1,5 @@
 class BatimentPoliceGeneral(var height: Int, var width: Int, var salaire: Int,
-  var effectifMax: Int, var coutMaintien: Int) extends Batiments with EstTravail {
+  var effectifMax: Int, var coutMaintien: Int) extends Batiments with EstTravail with Police {
   effectifActuel = 0
 
   //effectifMax = height* width*4

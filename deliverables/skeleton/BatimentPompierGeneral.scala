@@ -1,5 +1,5 @@
 class BatimentPompierGeneral(var height: Int, var width: Int, var coutMaintien: Int, var feu: Boolean,
-  var effectifMax: Int, var effectifActuel: Int, var salaire: Int) extends Batiments with Soigner with EstTravail {
+  var effectifMax: Int, var effectifActuel: Int, var salaire: Int) extends Batiments with Pompier with EstTravail {
 
   var radius = height * width
   
